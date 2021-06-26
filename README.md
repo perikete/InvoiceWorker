@@ -11,6 +11,6 @@ the following parameter should be used instead:
 
 TODO/Future Improvements:
 
-- [] PageSize could be read from a configuration file/command line instead of being hardcoded.
-- [] DelayToRefetchInMs could be read from a configuration file/command line instead of being hardcoded.
-- [] Invoice templating could be improved using a robust HTML template engine(ie Razor).
+- PageSize could be read from a configuration file/command line instead of being hardcoded.
+- DelayToRefetchInMs could be read from a configuration file/command line instead of being hardcoded.
+- Invoice templating could be improved using a robust HTML template engine(ie Razor).
