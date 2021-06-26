@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Invoice</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #line-items {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #line-items td, #line-items th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #line-items tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            #line-items tr:hover {
+                background-color: #ddd;
+            }
+
+            #line-items th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+                color: white;
+            }
+
+        .f-left {
+            float: left;
+        }
+
+        .f-right {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <div class="f-left">
+            <h1>Company Name</h1>
+            <h3>Street 123</h3>
+            <h3>Homer Simpson</h3>
+            <h3>12 Evergreen Ave, Springfield</h3>
+            <h3>09-2223-23293</h3>
+        </div>
+
+        <div class="f-right">
+            <h1>Invoice</h1>
+            <h3>Date: {@CreatedDateUtc}</h3>
+            <h3>Invoice #: {@InvoiceNumber}</h3>
+            <h3>Due Date: {@DueDateUtc}</h3>
+            <h3>Invoice Status: {@Status}</h3>
+            {@InvoiceUpdatedData}
+        </div>
+
+        <div>
+            <table id="line-items">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                        <th>Unit Cost</th>
+                        <th>Total Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {@LineItems}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td />
+                        <td />
+                        <td>TOTAL:</td>
+                        <td>{@TotalInvoice}</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
