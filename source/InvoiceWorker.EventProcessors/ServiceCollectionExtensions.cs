@@ -15,7 +15,7 @@ namespace InvoiceWorker.EventProcessors
             var invoiceDirectory = configuration[InvoicePdfDirectoryParam];
 
             if (string.IsNullOrWhiteSpace(invoiceDirectory))
-                throw new ArgumentNullException($"{InvoicePdfDirectoryParam} parameter needs to be specified.");
+                throw new ArgumentNullException(InvoicePdfDirectoryParam);
 
             services.Configure<InvoiceLocationOptions>(o => o.BaseDirectory = invoiceDirectory);
 
