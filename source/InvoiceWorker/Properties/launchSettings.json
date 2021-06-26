@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "InvoiceWorker": {
+      "commandName": "Project",
+      "commandLineArgs": " --invoice-dir=c:\\temp\\invoices --feed-url=https://localhost:44309/"
+    }
+  }
+}
